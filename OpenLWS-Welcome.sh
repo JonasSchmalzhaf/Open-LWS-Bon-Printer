@@ -8,7 +8,7 @@ echo -e "\x1b\x74\x00\x1b\x61\x01\x1d\x21\x11" > /dev/usb/lp0
 echo -e "SIT Lehrwerkstatt" > /dev/usb/lp0
 #Druck leere Zeile
 echo -e "\x0a" > /dev/usb/lp0
-echo -e "Drucker Status: läuft :)" > /dev/usb/lp0
+echo -e "Drucker Status: l\x84uft" > /dev/usb/lp0
 
 echo -e "\x0a" > /dev/usb/lp0
 

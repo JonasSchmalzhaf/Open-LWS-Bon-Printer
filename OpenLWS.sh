@@ -54,7 +54,10 @@ author=$(echo "$author" | sed 's/ß/\xE1/g')
 author=$(echo "$author" | sed 's/#/\x0A/g')
 # Konfiguration der Textausrichtung, Schrifftgröße, etc.
 echo -e "\x1b\x74\x00\x1b\x61\x01\x1d\x21\x11" > /dev/usb/lp0
+#echo -e "\x1b\x2d\x02" > /dev/usb/lp0
 echo -e "SIT Lehrwerkstatt\x0a" > /dev/usb/lp0
+#echo -e "\x1b\x2d\x00" > /dev/usb/lp0
+echo -e "-----" > /dev/usb/lp0
 # Druck einer leeren Zeile bzw. eines Zeilenumbruchs
 echo -e "\x0A" > /dev/usb/lp0
 # Druck des Zitats (mit korrekten Zeilenumbrüchen und Sonderzeichen
@@ -62,7 +65,8 @@ echo -e "$quote" > /dev/usb/lp0
 echo -e "\x0A" > /dev/usb/lp0
 # Druck des Autors
 echo "$author" >  /dev/usb/lp0
-echo -e "\x0A\x0A" > /dev/usb/lp0
+echo -e "\x0A-----\x0A" > /dev/usb/lp0
+#echo -e "-----" > /dev/usb/lp0
 # Druck: |e@rn t0gethe gr#w +ogeth<r
 echo -e "\xb3e\x40rn" > /dev/usb/lp0
 echo -e "t0gethe\xaa" > /dev/usb/lp0
