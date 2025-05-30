@@ -3,8 +3,8 @@ Description=OpenLWS Python Script
 After=network.target
  
 [Service]
-ExecStart=/usr/bin/python3 /home/open-lws/Open-LWS-Bon-Printer/OpenLWS.py
-WorkingDirectory=/home/open-lws/Open-LWS-Bon-Printer
+ExecStart=/usr/bin/python3 /etc/OpenLWS/OpenLWS.py
+WorkingDirectory=/etc/OpenLWS/
 Restart=always
 User=open-lws
  

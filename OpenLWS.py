@@ -21,7 +21,7 @@ sensor = adafruit_vl6180x.VL6180X(i2c)
 # Swapping for the following would add a +10 millimeter offset to measurements:
 # sensor = adafruit_vl6180x.VL6180X(i2c, offset=10)
 
-os.system("/home/open-lws/Open-LWS-Bon-Printer/OpenLWS-Welcome.sh")
+os.system("./OpenLWS-Welcome.sh")
 
 # Main loop prints the range and lux every second:
 while True:
@@ -31,7 +31,7 @@ while True:
 
     if range_mm < 70:
         print("Run Script")
-        os.system ("/home/open-lws/Open-LWS-Bon-Printer/OpenLWS.sh")
+        os.system ("./OpenLWS.sh")
         time.sleep(3.00)
     # Delay for a second.
     time.sleep(0.15)

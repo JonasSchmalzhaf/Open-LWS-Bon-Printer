@@ -4,15 +4,15 @@
 sudo chmod o+rw /dev/usb/lp0 # Set Printer Serial Connectin Privilegs
 
 # Löschen des vorherigen Zitats
-rm /home/open-lws/quote
+sudo rm /etc/OpenLWS/quote
 
 # Speichern des neuen Zitats
-cd /home/open-lws/
-wget https://api.zitat-service.de/v1/quote
+cd /etc/OpenLWS/
+sudo wget https://api.zitat-service.de/v1/quote
 
 # Auslesen des Zitats und des Autors aus JSON Datensatz
-quote=$(cat /home/open-lws/quote | grep -oP '"quote":"\K[^"]+')
-author=$(cat /home/open-lws/quote | grep -oP '"authorName":"\K[^"]+')
+quote=$(cat /etc/OpenLWS/quote | grep -oP '"quote":"\K[^"]+')
+author=$(cat /etc/OpenLWS/quote | grep -oP '"authorName":"\K[^"]+')
 
 echo "$quote"
 echo "$author"
