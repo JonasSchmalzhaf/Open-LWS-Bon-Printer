@@ -17,8 +17,14 @@ sudo chmod 775 /etc/OpenLWS/OpenLWS.py
 echo "Welcome Script (/etc/OpenLWS/OpenLWS-Welcome.sh) berechtigen."
 sudo chmod 775 /etc/OpenLWS/OpenLWS-Welcome.sh
 
+"Update & Upgrade"
+sudo apt-get update && upgrade -y
+
 "Installation von Python3"
 sudo apt -y install python3-full
+
+"Installation von PIP"
+sudo apt -y install python3-pip
 
 "Installation raspi-config"
 sudo apt -y install raspi-config
@@ -28,11 +34,12 @@ sudo pip3 install adafruit-blinka --break-system-packages
 sudo pip3 install adafruit-circuitpython-vl6180x --break-system-packages
 
 "Aktivierung des I2C Moduls"
-sudo raspi-config noint do_i2c 0
+sudo raspi-config nonint do_i2c 0
 
 sudo cp $directory/OpenLWS.service /etc/systemd/system/OpenLWS.service
 sudo chmod 755 /etc/systemd/system/OpenLWS.service
 sudo systemctl daemon-reload
+sudo systemctl enable OpenLWS.service
 sudo service OpenLWS start
 echo "Installation abgeschlossen. Neustart"
 

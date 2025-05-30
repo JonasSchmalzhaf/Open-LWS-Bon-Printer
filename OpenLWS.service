@@ -6,7 +6,7 @@ After=network.target
 ExecStart=/usr/bin/python3 /etc/OpenLWS/OpenLWS.py
 WorkingDirectory=/etc/OpenLWS/
 Restart=always
-User=open-lws
+User=root
  
 [Install]
 WantedBy=multi-user.target
