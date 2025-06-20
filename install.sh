@@ -1,10 +1,10 @@
 #!/bin/bash
 
 directory=$(pwd)
-"OpenLWS Ordner in /etc erstelln."
+echo "OpenLWS Ordner in /etc erstelln."
 sudo mkdir /etc/OpenLWS
 
-"Scripte nach /etc/OpenLWS kopieren"
+echo "Scripte nach /etc/OpenLWS kopieren"
 cp $directory/OpenLWS.sh /etc/OpenLWS/OpenLWS.sh
 cp $directory/OpenLWS.py /etc/OpenLWS/OpenLWS.py
 cp $directory/OpenLWS-Welcome.sh /etc/OpenLWS/OpenLWS-Welcome.sh
@@ -17,23 +17,23 @@ sudo chmod 775 /etc/OpenLWS/OpenLWS.py
 echo "Welcome Script (/etc/OpenLWS/OpenLWS-Welcome.sh) berechtigen."
 sudo chmod 775 /etc/OpenLWS/OpenLWS-Welcome.sh
 
-"Update & Upgrade"
+echo "Update & Upgrade"
 sudo apt-get update && upgrade -y
 
-"Installation von Python3"
+echo "Installation von Python3"
 sudo apt -y install python3-full
 
-"Installation von PIP"
+echo "Installation von PIP"
 sudo apt -y install python3-pip
 
-"Installation raspi-config"
+echo "Installation raspi-config"
 sudo apt -y install raspi-config
 
-"Installation der Python Module"
+echo "Installation der Python Module"
 sudo pip3 install adafruit-blinka --break-system-packages
 sudo pip3 install adafruit-circuitpython-vl6180x --break-system-packages
 
-"Aktivierung des I2C Moduls"
+echo "Aktivierung des I2C Moduls"
 sudo raspi-config nonint do_i2c 0
 
 sudo cp $directory/OpenLWS.service /etc/systemd/system/OpenLWS.service
