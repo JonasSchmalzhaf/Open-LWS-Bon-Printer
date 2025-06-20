@@ -18,7 +18,7 @@ echo "Welcome Script (/etc/OpenLWS/OpenLWS-Welcome.sh) berechtigen."
 sudo chmod 775 /etc/OpenLWS/OpenLWS-Welcome.sh
 
 echo "Update & Upgrade"
-sudo apt-get update && upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 
 echo "Installation von Python3"
 sudo apt -y install python3-full
