@@ -8,6 +8,7 @@ Es wurde sich für einen Raspberry Pi entschieden, welcher via USB-Kabel mit dem
 Um diesen Print mit Sensoren zu triggern, wurde ein Python Script geschrieben, welches Sensordaten ausliest und das Shell Skript OpneLWS.sh dementsprechen ausführt.
 
 ## Installieren der Bon-Drucker Software auf einem Raspberry PI
+Voraussetzungen: Der Raspberry Pi braucht eine funktionsfähige Verbindung zum Internet und git muss installiert werden ([Git installieren](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)).
 1. Download des Repositorys
     ```
     git clone https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
