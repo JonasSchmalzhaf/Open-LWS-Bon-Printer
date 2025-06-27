@@ -13,9 +13,9 @@ Um diesen Print mit Sensoren zu triggern, wurde ein Python Script geschrieben, w
     git clone https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
     ```
 
-2. In Open-LWS-Bon-Drucker Verzeichnis wechseln
+2. In Open-LWS-Bon-Printer Verzeichnis wechseln
     ```
-    cd Open-LWS-Bon-Drucker
+    cd Open-LWS-Bon-Printer
     ```
 
 3. Rechte für install.sh vergeben
