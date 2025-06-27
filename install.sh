@@ -21,7 +21,7 @@ echo "Update & Upgrade"
 sudo apt-get update && sudo apt-get upgrade -y
 
 echo "Installation von Python3"
-sudo apt -y install python3-full
+sudo apt -y install python3.13
 
 echo "Installation von PIP"
 sudo apt -y install python3-pip

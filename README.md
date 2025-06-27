@@ -10,10 +10,6 @@ Um diesen Print mit Sensoren zu triggern, wurde ein Python Script geschrieben, w
 ## Installieren der Bon-Drucker Software auf einem Raspberry PI
 1. Download des Repositorys
     ```
-    wget https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
-    ```
-    oder
-    ```
     git clone https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
     ```
 
@@ -24,7 +20,7 @@ Um diesen Print mit Sensoren zu triggern, wurde ein Python Script geschrieben, w
 
 3. Ausführen von install.sh
     ```
-    ./install.sh
+    sudo ./install.sh
     ```
 
 ## Erläuterungen für evtl. Anpassungen
