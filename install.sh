@@ -41,7 +41,7 @@ sudo chmod 755 /etc/systemd/system/OpenLWS.service
 sudo systemctl daemon-reload
 sudo systemctl enable OpenLWS.service
 sudo service OpenLWS start
-sudo echo "dtoverlay=gpio-shutdown,gpio_pin=18 >> /boot/firmware/config.txt
+sudo echo "dtoverlay=gpio-shutdown,gpio_pin=18" >> /boot/firmware/config.txt
 echo "Installation abgeschlossen. Neustart"
 
 sudo reboot
