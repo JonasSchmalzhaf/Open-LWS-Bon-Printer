@@ -37,11 +37,13 @@ Als nächstes werden alle benötigten Programme/Bibliotheken installiert und das
 Abschließend wird ein System Service erstellt welcher für das starten des Python-Skripts verantwortlich ist und in der /boot/firmware/config.txt wird der Button zum Shutdown hinzugefügt.
 Danach folgt nur noch der reboot um alle Änderungen zu aktivieren.
 
+
 Programmablauf:
 
 Die zentrale Logik befindet sich in der OpenLWS.py Datei, diese wird vom OpenLWS System Service am laufen gehalten. Beim start des Python Scripts wird das OpenLWS-Welcome.sh ausgeführt um dem Nutzer zu signalisieren das der Bon Drucker an ist und ab jetzt Einsatzfähig ist. Dazu wird ein Druckauftrag gesendet mit der Ausgabe:
     Druckers Status: läuft
 Anschließend frägt das Script den Sensor ab, bis dieser getriggert wird und darauf hin wird das OpenLWS.sh script aufgerufen. Dieses frägt dann automatisch ein neues Zitat von der API an und druckt es im richtigen Format auf den Kassenzettel.
+
 
 Programm Änderungen:
 
