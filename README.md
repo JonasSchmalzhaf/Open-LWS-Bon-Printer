@@ -31,17 +31,20 @@ Um diesen Print mit Sensoren zu triggern, wurde ein Python Script geschrieben, w
 ## Erläuterungen für evtl. Anpassungen
 ### Aufbau der Software
 Installation:
+
 Im ersten Schritt der Installation wird in /etc ein OpenLWS Ordner erstellt, welcher alle Datein beinhaltet welche für den Betrieb des Bon Druckers benötigt werden (OpenLWS.sh, OpenLWS.py, OpenLWS-Welcome.sh). Anschließend werden alle diese Dateien richtig berechtigt und der Raspberry wird geupdated und upgegraded.
 Als nächstes werden alle benötigten Programme/Bibliotheken installiert und das I2C Module des Raspberrys via rapi-config aktiviert.
 Abschließend wird ein System Service erstellt welcher für das starten des Python-Skripts verantwortlich ist und in der /boot/firmware/config.txt wird der Button zum Shutdown hinzugefügt.
 Danach folgt nur noch der reboot um alle Änderungen zu aktivieren.
 
 Programmablauf:
+
 Die zentrale Logik befindet sich in der OpenLWS.py Datei, diese wird vom OpenLWS System Service am laufen gehalten. Beim start des Python Scripts wird das OpenLWS-Welcome.sh ausgeführt um dem Nutzer zu signalisieren das der Bon Drucker an ist und ab jetzt Einsatzfähig ist. Dazu wird ein Druckauftrag gesendet mit der Ausgabe:
     Druckers Status: läuft
 Anschließend frägt das Script den Sensor ab, bis dieser getriggert wird und darauf hin wird das OpenLWS.sh script aufgerufen. Dieses frägt dann automatisch ein neues Zitat von der API an und druckt es im richtigen Format auf den Kassenzettel.
 
 Programm Änderungen:
+
 Sollen Änderungen am laufendne Programm vorgenommen werden müssen die Dateien in /etc/OpenLWS angepasst werden und der Serivce via
 ```
 service OpenLWS restart
