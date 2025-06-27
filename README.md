@@ -13,12 +13,17 @@ Um diesen Print mit Sensoren zu triggern, wurde ein Python Script geschrieben, w
     git clone https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
     ```
 
-2. Rechte für install.sh vergeben
+2. In Open-LWS-Bon-Drucker Verzeichnis wechseln
+    ```
+    cd Open-LWS-Bon-Drucker
+    ```
+
+3. Rechte für install.sh vergeben
     ```
     sudo chmod 775 install.sh
     ```
 
-3. Ausführen von install.sh
+4. Ausführen von install.sh
     ```
     sudo ./install.sh
     ```
